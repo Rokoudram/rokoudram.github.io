@@ -1,9 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SingleAnswerInput from '../../components/SingleAnswerInput';
 ---
 
 <BaseLayout title="Des chiffres et des chiffres">
   <h1>Des chiffres et des chiffres</h1>
 
-    <p> La partie mathématique du jeux télévisé "Des chiffres et des lettres" </p>
+  <p>
+    La partie mathématique du jeu télévisé « Des chiffres et des lettres »
+  </p>
+  
+  <div class="math-question">
+    <span>40 + 2 ? =</span>
+    <SingleAnswerInput client:load answer="42" />
+  </div>
 </BaseLayout>
+
+<style>
+  .math-question {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-top: 2rem;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+</style>
