@@ -1,0 +1,65 @@
+.single-answer-input {
+    width: 90px;
+    box-sizing: border-box;
+
+    padding: 0.45rem 0.6rem;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+
+    color: #222;
+    background: #fff;
+
+    border: 3px solid #777;
+    border-radius: 7px;
+
+    outline: none;
+
+    transition:
+        border-color var(--transispeed),
+        background-color var(--transispeed),
+        color var(--transispeed),
+        box-shadow var(--transispeed),
+        transform var(--transispeed);
+}
+
+.single-answer-input::placeholder {
+    color: #999;
+    font-weight: normal;
+}
+
+.single-answer-input:focus {
+    border-color: #222;
+
+    box-shadow:
+        0 0 0 3px rgb(255 255 255 / 20%);
+
+    transform: scale(1.05);
+}
+
+.single-answer-input--correct {
+    color: white;
+    background: #238636;
+    border-color: #42d66b;
+
+    box-shadow:
+        0 0 0 3px rgb(66 214 107 / 25%);
+
+    animation: answer-correct 350ms ease;
+}
+
+@keyframes answer-correct {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
