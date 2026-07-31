@@ -8,6 +8,14 @@ export const sections = [
         nav_mobile:true,
     },
     {
+        title: "Exercices",
+        href: "/exercices",
+        description:
+        "Exercices de mathématiques niveau lycée",
+        nav: true,
+        nav_mobile:true,
+    },
+    {
         title: "À propos",
         href: "/about",
         description:
