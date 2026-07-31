@@ -2,8 +2,35 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Exercices de mathématiques">
-	<p>
-        Exercices de mathématiques niveau lycée
-    </p>
+<BaseLayout title="Exercices">
+
+    <div class="grid">
+        <div class="zoom">
+            <a class="card" href={"/exercices/seconde"}>
+                <h2>Seconde</h2>
+                <p>Exercices de la classe de seconde générale et technologique</p>
+                <span>Découvrir →</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="zoom">
+            <a class="card" href={"/exercices/premiere"}>
+                <h2>Première spécialité</h2>
+                <p>Exercices de la classe de première générale spécialité mathématiques</p>
+                <span>Découvrir →</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="zoom">
+            <a class="card" href={"/exercices/terminale"}>
+                <h2>Terminale spécialité</h2>
+                <p>Exercices de la classe de terminale générale spécialité mathématiques</p>
+                <span>Découvrir →</span>
+            </a>
+        </div>
+    </div>
 </BaseLayout>
