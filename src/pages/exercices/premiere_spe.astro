@@ -2,12 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout , title="Seconde">
+<BaseLayout , title="Première spécialité">
 
   <div id="liste-pdf"></div>
 
   <script is:inline>
-  fetch("https://rokoudram.github.io/LaTeX/2nd_gt/Exercices/index.json")
+  fetch("https://rokoudram.github.io/LaTeX/1ere_spe_maths/Exercices/index.json")
     .then(response => {
         if (!response.ok) {
             throw new Error("Erreur HTTP " + response.status);
@@ -29,7 +29,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             lien.rel = "noopener noreferrer";
 
             lien.href =
-              "https://rokoudram.github.io/LaTeX/2nd_gt/Exercices/" + pdf;
+              "https://rokoudram.github.io/LaTeX/1ere_spe_maths/Exercices/" + pdf;
 
             const match = pdf.match(/^chap(\d+)_/);
 

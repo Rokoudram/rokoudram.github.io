@@ -4,6 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout title="Exercices">
 
+    <section class="intro">
+        <p>
+            Page d'accueil des exercices
+        </p>
+    </section>
+
     <div class="grid">
         <div class="zoom">
             <a class="card" href={"/exercices/seconde"}>
@@ -12,25 +18,49 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 <span>Découvrir →</span>
             </a>
         </div>
-    </div>
+    
 
-    <div class="grid">
         <div class="zoom">
-            <a class="card" href={"/exercices/premiere"}>
+            <a class="card" href={"/exercices/premiere_spe"}>
                 <h2>Première spécialité</h2>
                 <p>Exercices de la classe de première générale spécialité mathématiques</p>
                 <span>Découvrir →</span>
             </a>
         </div>
-    </div>
 
-    <div class="grid">
+
         <div class="zoom">
-            <a class="card" href={"/exercices/terminale"}>
+            <a class="card" href={"/exercices/terminale_spe"}>
                 <h2>Terminale spécialité</h2>
                 <p>Exercices de la classe de terminale générale spécialité mathématiques</p>
                 <span>Découvrir →</span>
             </a>
         </div>
     </div>
+
+
 </BaseLayout>
+
+
+
+<style>
+.intro {
+    min-width: 50px;
+    max-width: 800px;
+    font-size: 1.2rem;
+}
+
+.intro p {
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: repeat(4,240px);
+    gap: 4rem;
+}
+
+
+</style>

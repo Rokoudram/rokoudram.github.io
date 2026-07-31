@@ -112,6 +112,11 @@ a {
 }
 
 
+
+/* ============================================================
+                    Zoom
+============================================================ */
+
 .zoom {
     transition: transform .65s ease;
 }
@@ -120,6 +125,10 @@ a {
     transform: scale(1.1);
 }
 
+
+/* ============================================================
+                    Shake animation
+============================================================ */
 
 @keyframes shake {
     10%,90% {
@@ -137,4 +146,47 @@ a {
     50% {
         transform: rotate(3deg);
     }
+}
+
+
+
+
+/* ============================================================
+                    Ligne
+============================================================ */
+
+.ligne {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--secondary);
+
+    width: 500px;
+    height: 30px;
+    padding: 5px;
+
+    background-color:white;
+    border: 5px solid var(--secondary);
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition:
+        transform .65s ease,
+        transform var(--transition),
+        border-color var(--transition)
+}
+
+.ligne:hover{
+    animation: shake .65s cubic-bezier(.36,.07,.19,.97);
+    border-color: var(--tertiary);
+    color: var(--tertiary);
+}
+
+.ligne h2 {
+    margin: 0 0 0 0 ;
+    font-size: 1.25rem;
+    color: #2b003a;
 }
