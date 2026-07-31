@@ -1,7 +1,7 @@
 export const sections = [
     {
         title: "Jeux",
-        href: "/jeux-maths/jeux",
+        href: "/jeux",
         description:
             "Page d'accueil des jeux.",
         nav: true,
@@ -9,7 +9,7 @@ export const sections = [
     },
     {
         title: "À propos",
-        href: "/jeux-maths/about",
+        href: "/about",
         description:
         "Informations relatives au site.",
         nav: true,
@@ -17,7 +17,7 @@ export const sections = [
     },
     {
         title: "Contact",
-        href: "/jeux-maths/contact",
+        href: "/contact",
         description:
         "Me contacter",
         nav: true,
