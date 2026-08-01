@@ -37,6 +37,8 @@ html {
 body {
     margin: 0;
     background: var(--bg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Helvetica';    
     min-height: 100vh;
     display: flex;
