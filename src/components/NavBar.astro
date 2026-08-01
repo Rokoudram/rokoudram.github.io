@@ -59,10 +59,6 @@ const pathname = Astro.url.pathname;
 
 <style>
 
-/* ----------------------------------------
---------------- Sur ordinateur
-----------------------------------------*/
-
 /* Barre de navigation */
 
 .navbar {
@@ -105,9 +101,7 @@ a {
     transition: transform var(--transispeed);
 }
 
-a:hover {
-    transform: scale(1.2);
-}
+
 
 nav {
     flex: 1;
@@ -121,18 +115,15 @@ nav {
     gap: 2rem;
 }
 
-/* Animation des liens */
 
+
+/* Animation des liens au clic */
 nav a {
     position: relative;
     color: black;
     text-decoration: none;
     font-weight: 600;
     transition: transform var(--transispeed), color var(--transispeed);
-}
-
-nav a:hover {
-    color: var(--tertiary);
 }
 
 nav a::after {
@@ -148,17 +139,33 @@ nav a::after {
     transition: transform var(--transispeed);
 }
 
-nav a:hover::after,
 nav a.active::after {
     transform: scaleX(1);
 }
 
 
 
-/* Suppression du bouton menu */
+/* ----------------------------------------
+--------------- Sur ordinateur
+----------------------------------------*/
 
-.menu-toggle {
-    display: none;
+@media (min-width:721px){
+
+/* Animation des liens en hover */
+    a:hover {
+        transform: scale(1.2);
+    }
+
+    nav a:hover {
+        color: var(--tertiary);
+    }
+
+    nav a:hover::after,
+
+/* Suppression du bouton menu */
+    .menu-toggle {
+        display: none;
+    }
 }
 
 
@@ -167,11 +174,9 @@ nav a.active::after {
 --------------- Sur téléphone
 ----------------------------------------*/
 
-
 @media (max-width:720px){
 
 /* Barre de navigation */
-
     .navbar-inner {
         display: flex;
         flex-wrap: wrap;
@@ -180,7 +185,6 @@ nav a.active::after {
 
 
 /* Bouton du menu */
-
     .menu-toggle{
         display:inline-flex;
         align-items:center;
@@ -200,7 +204,6 @@ nav a.active::after {
 
 
 /* Animation du menu */
-
     nav {
         flex-basis: 100%;
         width: 100%;
@@ -223,12 +226,10 @@ nav a.active::after {
         background: white;
         border-radius: 10px;
         padding: 0 0 1rem 0;
-        transform: translateX(1rem);
     }
 
 
 /* Animation des icônes ☰ et ✕ */
-
     .hamburger {
         display: flex;
         flex-direction: column;

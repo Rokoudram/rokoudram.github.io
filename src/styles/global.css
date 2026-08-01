@@ -211,3 +211,20 @@ a {
     color: var(--tertiary);
 }
 
+
+
+
+
+/* ============================================================
+                    Suppression des hovers sur appareil incompatible
+============================================================ */
+
+@media (hover: none) {
+
+    a:hover,
+    button:hover {
+        transform: none;
+        color: inherit;
+    }
+
+}
