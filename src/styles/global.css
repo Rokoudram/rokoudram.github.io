@@ -221,9 +221,9 @@ a {
 
 @media (hover: none) {
 
-    a:hover,
+    *:hover,
     button:hover {
-        transform: none;
+        transform: none !important;
         color: inherit;
     }
 
