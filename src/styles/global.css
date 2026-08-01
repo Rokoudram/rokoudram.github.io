@@ -85,7 +85,6 @@ a {
 .grid {
     display: grid;
     justify-content: center;
-    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(220px, 240px));
     gap: 3rem;
 }
@@ -105,11 +104,11 @@ a {
     color: var(--secondary);
 
     width: 100%;
+    height:100%;
     max-width: 240px;
-    height: 100%;
-    max-height: 150px;
+    min-height:140px;
+
     padding: 20px;
-    box-sizing: border-box;
 
     background-color:white;
     border: 5px solid var(--secondary);
@@ -142,6 +141,7 @@ a {
 ============================================================ */
 
 .zoom {
+    display: flex;
     transition: transform .65s ease;
 }
 
@@ -187,8 +187,10 @@ a {
     font-size: 0.85rem;
     color: var(--secondary);
 
-    width: 500px;
-    height: 30px;
+    width:100%;
+    max-width: 500px;
+    height:100%;
+    max-height: 40px;
     padding: 5px;
 
     background-color:white;
@@ -198,9 +200,9 @@ a {
     text-decoration: none;
 
     transition:
-        transform .65s ease,
         transform var(--transition),
-        border-color var(--transition)
+        border-color var(--transition),
+        color var(--transition);
 }
 
 .ligne:hover{
@@ -209,8 +211,3 @@ a {
     color: var(--tertiary);
 }
 
-.ligne h2 {
-    margin: 0 0 0 0 ;
-    font-size: 1.25rem;
-    color: #2b003a;
-}

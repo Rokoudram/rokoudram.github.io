@@ -20,9 +20,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         pdfs.forEach(pdf => {
 
-            const zoom = document.createElement("div");
-            zoom.className = "zoom";
-
             const lien = document.createElement("a");
             lien.className = "ligne";
             lien.target = "_blank";
@@ -44,8 +41,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               `Chapitre ${numero} : ` +
               titre.charAt(0).toUpperCase() + titre.slice(1);
 
-            zoom.appendChild(lien);
-            liste.appendChild(zoom);
+            liste.appendChild(lien);
          });
 
     })
@@ -62,6 +58,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 #liste-pdf {
   display: flex;
   flex-direction: column;
+  align-items:center;
   gap: 0.5rem;
 }
 

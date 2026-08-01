@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout , title="Seconde">
+<BaseLayout title="Seconde">
 
   <div id="liste-pdf"></div>
 
@@ -19,9 +19,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         const liste = document.getElementById("liste-pdf");
 
         pdfs.forEach(pdf => {
-
-            const zoom = document.createElement("div");
-            zoom.className = "zoom";
 
             const lien = document.createElement("a");
             lien.className = "ligne";
@@ -44,8 +41,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               `Chapitre ${numero} : ` +
               titre.charAt(0).toUpperCase() + titre.slice(1);
 
-            zoom.appendChild(lien);
-            liste.appendChild(zoom);
+            liste.appendChild(lien);
          });
 
     })
@@ -62,7 +58,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 #liste-pdf {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items:center;
+  gap:0.75rem;
 }
 
 

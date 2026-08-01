@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout , title="Terminale option mathématiques expertes">
+
+  <div id="liste-pdf"></div>
+
+  <script is:inline>
+  fetch("https://rokoudram.github.io/LaTeX/term_maths_exp/Exercices/index.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erreur HTTP " + response.status);
+        }
+        return response.json();
+    })
+    .then(pdfs => {
+
+        const liste = document.getElementById("liste-pdf");
+
+        pdfs.forEach(pdf => {
+
+            const lien = document.createElement("a");
+            lien.className = "ligne";
+            lien.target = "_blank";
+            lien.rel = "noopener noreferrer";
+
+            lien.href =
+              "https://rokoudram.github.io/LaTeX/term_maths_exp/Exercices/" + pdf;
+
+            const match = pdf.match(/^chap(\d+)_/);
+
+            const numero = match ? match[1] : "";
+
+            const titre = pdf
+              .replace(/^chap\d+_/, "")   // supprime chapXX_
+              .replace("_exos.pdf", "")   // supprime _exos.pdf
+              .replaceAll("_", " ");      // remplace _ par des espaces
+
+            lien.textContent =
+              `Chapitre ${numero} : ` +
+              titre.charAt(0).toUpperCase() + titre.slice(1);
+
+            liste.appendChild(lien);
+         });
+
+    })
+    .catch(error => {
+        console.error("Erreur :", error);
+    });
+  </script>
+
+</BaseLayout>
+
+
+<style>
+
+#liste-pdf {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 0.5rem;
+}
+
+
+</style>
