@@ -160,7 +160,9 @@ nav a.active::after {
         color: var(--tertiary);
     }
 
-    nav a:hover::after,
+    nav a:hover::after{
+        transform: scaleX(1);
+    }
 
 /* Suppression du bouton menu */
     .menu-toggle {
@@ -210,7 +212,7 @@ nav a.active::after {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease-in-out;
-        margin-left: :auto;
+        margin-left: auto;
     }
 
     nav.open {
