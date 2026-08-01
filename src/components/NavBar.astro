@@ -53,11 +53,6 @@ const pathname = Astro.url.pathname;
         nav?.classList.toggle("open");
         button?.classList.toggle("open");
 
-        if (nav?.classList.contains("open")) {
-            icon.textContent = "✕";
-        } else {
-            icon.textContent = "☰";
-        }
     });
 </script>
 
@@ -178,7 +173,7 @@ nav a.active::after {
     }
 
 
-/* Gestion du menu */
+/* Bouton du menu */
 
     .menu-toggle{
         display:inline-flex;
@@ -196,6 +191,9 @@ nav a.active::after {
         font-weight:600;
         margin-right: 2rem;
     }
+
+
+/* Animation du menu */
 
     nav {
         flex-basis: 100%;
@@ -251,10 +249,6 @@ nav a.active::after {
         transform: translateY(-6px) rotate(-45deg);
     }  
 
-
 }
-
-
-
 
 </style>
