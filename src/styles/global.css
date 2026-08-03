@@ -224,7 +224,6 @@ a {
     *:hover,
     button:hover {
         transform: none !important;
-        color: inherit;
     }
 
 }
