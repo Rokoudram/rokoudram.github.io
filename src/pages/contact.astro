@@ -6,10 +6,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<p> Me contacter </p>
 
-	<form class="contact-form">
+	<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+		<input type="hidden" name="access_key" value="da2cbf7f-9551-4fdd-9e1b-b55507f0e21b">
+
+		<input
+			type="hidden"
+			name="_next"
+			value="https://rokoudram.github.io"
+		>
 
 		<select id="sujet" name="sujet">
-			<option value="" disabled selected>
+			<option value="neutral" disabled selected>
 				Choisissez un sujet ...
 			</option>
 
@@ -34,11 +42,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			</option>
 		</select>
 
+		<input 
+			id="email"
+			type="email"
+			name="email"
+			required
+			placeholder="Entrez votre adresse e-mail"
+		>
+		
 		<textarea
 			id="message"
 			name="message"
 			rows="8"
-			placeholder="Écrivez votre message ici..."
+			placeholder="Écrivez votre message ici ..."
 		></textarea>
 
 		<button type="submit">Envoyer</button>
@@ -106,6 +122,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	}
 
 	.contact-form select:focus {
+		border-color: var(--tertiary);
+		outline: none;
+	}
+
+	/* Zone pour l'adresse mail */
+	.contact-form input {
+		width: 79%;
+		padding: 0.5rem ;
+		border: 2px solid var(--secondary);
+		border-radius: 5px;
+		font-size: 0.7rem;
+		background-color: white;
+		cursor: pointer;
+	}
+
+	.contact-form input:focus {
 		border-color: var(--tertiary);
 		outline: none;
 	}
