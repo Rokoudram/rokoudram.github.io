@@ -3,5 +3,111 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contact">
+
 	<p> Me contacter </p>
+
+	<form class="contact-form">
+
+		<select id="sujet" name="sujet">
+			<option value="" disabled selected>
+				Choisissez un sujet ...
+			</option>
+
+			<option value="bug">
+				Bug
+			</option>
+
+			<option value="erreur">
+				Erreur d'énoncé
+			</option>
+
+			<option value="suggestion">
+				Suggestion
+			</option>
+
+			<option value="perso">
+				Me contacter personnellement
+			</option>
+
+			<option value="autre">
+				Autre
+			</option>
+		</select>
+
+		<textarea
+			id="message"
+			name="message"
+			rows="8"
+			placeholder="Écrivez votre message ici..."
+		></textarea>
+
+		<button type="submit">Envoyer</button>
+
+	</form>
+
 </BaseLayout>
+
+
+
+<style>
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	/* Zone de texte */
+	.contact-form textarea {
+		width: 80%;
+		padding: 0.5rem;
+
+		min-height: 100px;
+		min-width: 300px;
+		resize:vertical;
+
+		border: 3px solid var(--secondary);
+  		border-radius: 10px;
+	}
+
+	.contact-form textarea:focus {
+		border-color: var(--tertiary);
+		outline: none ;
+	}
+
+	/* Bouton "envoyer" */
+	.contact-form button {
+		background-color: var(--secondary);
+		color: white;
+		border: 1px solid white;
+
+		padding: 0.5rem;
+		border-radius: 5px;
+		font-size: 0.7rem;
+
+		cursor: pointer;
+		align-self: center;
+	}
+
+	.contact-form button:hover{
+		background-color: var(--tertiary);
+	}
+
+	/* Liste déroulante */
+	.contact-form select {
+		width: 79%;
+		padding: 0.5rem ;
+		border: 2px solid var(--secondary);
+		border-radius: 5px;
+		font-size: 0.7rem;
+		background-color: white;
+		cursor: pointer;
+	}
+
+	.contact-form select:focus {
+		border-color: var(--tertiary);
+		outline: none;
+	}
+
+</style>
