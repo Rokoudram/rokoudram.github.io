@@ -4,7 +4,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Contact">
 
-	<p> Me contacter </p>
+	<div class="intro">
+		<h2>Me contacter</h2>
+		<p>
+			Pour me contacter, veuillez remplir le formulaire de contact ci-contre. <br>
+			Si vous voulez me signaler un bug ou une erreur d'énoncé, merci d'être le plus précis possible dans vos explications !
+		</p>
+	</div>
 
 	<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
@@ -49,7 +55,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			required
 			placeholder="Entrez votre adresse e-mail"
 		>
-		
+
 		<textarea
 			id="message"
 			name="message"
@@ -67,6 +73,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style>
 
+	/* Généralités */
 	.contact-form {
 		display: flex;
 		flex-direction: column;
@@ -140,6 +147,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.contact-form input:focus {
 		border-color: var(--tertiary);
 		outline: none;
+	}
+
+	/* Intro */
+	.intro{
+		font-size: 0.85rem;
 	}
 
 </style>
