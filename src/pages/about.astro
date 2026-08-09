@@ -41,7 +41,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
         </div>
 
-        <img src="/favicon_small.png" alt="Inverse circulaire échiquier">
+        <img src="/favicon.png" alt="Inverse circulaire échiquier">
       </div>
       <hr>
     </section>
@@ -62,7 +62,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
         </div>
 
-        <img src="/chessboard_circ_small.png" alt="Échiquier circulaire">
+        <img src="/chessboard_circ.png" alt="Échiquier circulaire">
       </div>
       <hr>
     </section>
@@ -134,5 +134,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 1rem 0 1rem;
   }
 
+
+  @media (max-width:720px){
+    section {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .text-image img {
+      display: none;
+    }
+
+  }
 
 </style>
