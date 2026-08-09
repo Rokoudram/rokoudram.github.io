@@ -1,27 +1,138 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "crimson";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <BaseLayout title="À propos">
-	<p> À propos </p>
+	
+  <div class="sections">
+
+    <section>
+      <div class="text-image">
+        <div>
+          <h3>À propos</h3>
+          <p>
+            Je m'appelle Merlin Olivry et je suis professeur de mathématiques certifié  depuis l'année 2026. <br>
+            Ceci est mon site web personnel. 
+            Il a vocation à réunir mes différentes productions concernant les mathématiques et leur enseignement. 
+            Pour l'instant vous pourrez surtout y retrouver mes exercices, et dans le futur j'ai comme ambition 
+            de publier quelques jeux mathématiques ainsi que le code LaTeX de mes projets en accès libre.
+          </p>
+        </div>
+
+        <img src="/spiral_chebichev.svg" alt="Polynôme de Tchebychev de premier ordre">
+      </div>
+      <hr> 
+    </section>
+    
+
+    <section>
+      <div class="text-image">
+        <div>
+          <h3>Remerciements</h3>
+          <p>
+            Je tiens à remercier toutes les personnes qui m'ont aidé dans la création de ce site et de son contenu, et tout
+            particulièrement à Victoire Pilon, Jonhatan Miron et Eliott Veyrier.
+
+              <br> <br>
+
+            Je partage également une pensée pour les élèves qui me donnent au quotidien toujours autant de matière
+            pour imaginer de nouveaux projets et d'idées pour le futur.
+          </p>
+        </div>
+
+        <img src="/favicon_small.png" alt="Inverse circulaire échiquier">
+      </div>
+      <hr>
+    </section>
+
+    <section>
+      <div class="text-image">
+        <div>
+          <h3>Mentions légales</h3>
+          <p>
+            Aucune reproduction, même partielle, autres que celles prévues à l'article L 122-5 du code de la propriété
+            intellectuelle, ne peut être faite de ce site sans l'autorisation expresse de l'auteur.
+
+            <br> <br>
+
+            Tout site public ou privé est autorisé à établir, sans autorisation préalable, un lien vers les informations
+            diffusées par http://www.rokoudram.github.io/. En revanche, les pages de http://www.rokoudram.github.io/ ne doivent
+            pas être imbriquées à l'intérieur des pages d'un autre site.
+          </p>
+        </div>
+
+        <img src="/chessboard_circ_small.png" alt="Échiquier circulaire">
+      </div>
+      <hr>
+    </section>
+
+  </div>
+
 </BaseLayout>
+
+
+
+<style>
+
+  /* Style des sections */
+  section {
+    width: 70%;
+    box-sizing: border-box;
+    text-align: center;
+
+    align-items: center;
+    gap: 2rem;
+  }
+  
+
+  /* Gauche - Droite */
+  section:nth-child(odd) {
+    margin-right: auto;
+  }
+
+  section:nth-child(even) {
+    margin-left: auto;
+  }
+
+  section:nth-of-type(odd) .text-image {
+    flex-direction: row;
+  }
+
+  section:nth-of-type(even) .text-image {
+    flex-direction: row-reverse;
+  }
+
+
+  /* Images */
+  .text-image {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .text-image > div {
+    flex: 1;
+  }
+
+  .text-image img {
+    height:128px;
+    width:auto;
+
+    margin : 0 1rem 0 1rem ;
+  }
+
+  /* Séparateur */
+  section hr {
+    
+    width : 95%;
+    height : 5px;
+    border : none;
+    background : white;
+    border-radius : 5px;
+
+    margin: 1rem 0 1rem;
+  }
+
+
+</style>
