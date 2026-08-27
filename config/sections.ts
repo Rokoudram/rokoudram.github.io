@@ -16,6 +16,14 @@ export const sections = [
         nav_mobile:true,
     },
     {
+        title: "Cours",
+        href: "/cours",
+        description:
+            "Page d'accueil des cours.",
+        nav: true,
+        nav_mobile:true,
+    },
+    {
         title: "À propos",
         href: "/about",
         description:
@@ -31,4 +39,5 @@ export const sections = [
         nav: true,
         nav_mobile:true,
     },
+
 ];

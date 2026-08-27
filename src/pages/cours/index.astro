@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Cours">
+
+    <section class="intro">
+        <p>
+            Page d'accueil des cours
+        </p>
+    </section>
+
+    <div class="grid">
+
+        <div class="zoom">
+            <a class="card" href={"/cours/seconde"}>
+                <h2>Seconde</h2>
+                <p>Cours de la classe de seconde générale et technologique</p>
+                <span>Découvrir →</span>
+            </a>
+        </div>
+    
+
+    </div>
+
+
+</BaseLayout>
+
+
+<style>
+.intro {
+    min-width: 50px;
+    max-width: 800px;
+    font-size: 1.2rem;
+}
+
+.intro p {
+    margin-bottom: 1.5rem;
+}
+
+
+
+</style>
