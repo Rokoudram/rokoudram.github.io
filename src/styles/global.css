@@ -155,7 +155,6 @@ a {
 ============================================================ */
 
 .zoom {
-    display: flex;
     transition: transform .65s ease;
 }
 
