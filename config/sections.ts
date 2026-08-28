@@ -1,4 +1,5 @@
 export const sections = [
+    /*
     {
         title: "Jeux",
         href: "/jeux",
@@ -7,6 +8,8 @@ export const sections = [
         nav: true,
         nav_mobile:true,
     },
+    */
+
     {
         title: "Exercices",
         href: "/exercices",
@@ -15,6 +18,7 @@ export const sections = [
         nav: true,
         nav_mobile:true,
     },
+
     {
         title: "Cours",
         href: "/cours",
@@ -23,6 +27,7 @@ export const sections = [
         nav: true,
         nav_mobile:true,
     },
+
     {
         title: "À propos",
         href: "/about",
@@ -31,6 +36,7 @@ export const sections = [
         nav: true,
         nav_mobile:true,
     },
+    
     {
         title: "Contact",
         href: "/contact",
