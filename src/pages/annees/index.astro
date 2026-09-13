@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { listeAnnees } from '../../../config/liste-annees';
+---
+
+<BaseLayout title="Année par année">
+
+	<h2>
+        Années scolaires
+    </h2>
+
+
+<div class="liste-annees">
+  {listeAnnees.map((niveau) => (
+    <a class="ligne" href={niveau.href}>
+      <h3>{niveau.titre}</h3>
+    </a>
+  ))}
+</div>
+
+
+</BaseLayout>
+
+<style>
+
+.liste-annees {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre les éléments horizontalement */
+  gap: 0.75rem;
+}
+
+</style>

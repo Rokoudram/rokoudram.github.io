@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { listeExercices } from '../../../config/liste-exercices';
 ---
 
 <BaseLayout title="Exercices">
@@ -10,51 +11,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
     </section>
 
-    <div class="grid">
 
-        <div class="zoom">
-            <a class="card" href={"/exercices/seconde"}>
-                <h2>Seconde</h2>
-                <p>Exercices de la classe de seconde générale et technologique</p>
-                <span>Découvrir →</span>
-            </a>
-        </div>
     
-
+<div class="grid">
+    {listeExercices.map((niveau) => (
         <div class="zoom">
-            <a class="card" href={"/exercices/premiere_spe"}>
-                <h2>Première spécialité</h2>
-                <p>Exercices de la classe de première générale spécialité mathématiques</p>
+            <a class="card" href={niveau.href}>
+                <h2>{niveau.titre}</h2>
+                <p>{niveau.description}</p>
                 <span>Découvrir →</span>
             </a>
         </div>
-
-
-        <div class="zoom">
-            <a class="card" href={"/exercices/terminale_spe"}>
-                <h2>Terminale spécialité</h2>
-                <p>Exercices de la classe de terminale générale spécialité mathématiques</p>
-                <span>Découvrir →</span>
-            </a>
-        </div>
-
-        <div class="zoom">
-            <a class="card" href={"/exercices/terminale_exp"}>
-                <h2>Option mathématiques expertes</h2>
-                <p>Exercices de l'option mathématiques expertes en classe de terminale générale</p>
-                <span>Découvrir →</span>
-            </a>
-        </div>
-
-        <div class="zoom">
-            <a class="card" href={"/exercices/terminale_techno"}>
-                <h2>Terminale technologique</h2>
-                <p>Exercices du tronc commun des classes de terminale technologique</p>
-                <span>Découvrir →</span>
-            </a>
-        </div>
-
-    </div>
+    ))}
+</div>
 
 
 </BaseLayout>

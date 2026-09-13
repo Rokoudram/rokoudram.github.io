@@ -212,13 +212,11 @@ a {
     text-decoration: none;
 
     transition:
-        transform var(--transition),
-        border-color var(--transition),
-        color var(--transition);
+        border-color 250ms ease,
+        color 250ms ease;
 }
 
 .ligne:hover{
-    animation: shake .65s cubic-bezier(.36,.07,.19,.97);
     border-color: var(--tertiary);
     color: var(--tertiary);
 }

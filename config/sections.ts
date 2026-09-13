@@ -29,6 +29,15 @@ export const sections = [
     },
 
     {
+        title: "Par année",
+        href: "/annees",
+        description:
+        "Documents, devoirs et progression par année",
+        nav: true,
+        nav_mobile:true,
+    },
+
+    {
         title: "À propos",
         href: "/about",
         description:
