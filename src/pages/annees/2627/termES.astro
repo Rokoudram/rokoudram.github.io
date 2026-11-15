@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Enseignement Scientifique (Terminale)">
+
+
+<div id="liste-pdf" , class = "grid">
+    <script is:inline>
+      fetch("https://rokoudram.github.io/LaTeX/term_es/index.json")
+        .then(r => r.json())
+        .then(pdfs => {
+          document.getElementById("liste-pdf").innerHTML =
+            pdfs.map(pdf =>
+              `<a class="ligne" href="https://rokoudram.github.io/LaTeX/term_es/${pdf}" target="_blank">${pdf}</a>`
+            ).join("");
+        });
+    </script>
+</div>
+
+
+</BaseLayout>
+
+
+<style>
+
+:global(.ligne) {
+    font-size: 0.75rem;
+
+    max-width: 350px;
+    height:40px;
+    padding: 3px;
+
+    border: 3px solid var(--secondary);
+    border-radius: 5px;
+}
+
+:global(.grid) {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 240px));
+    column-gap : 1rem ;
+    row-gap: 10px ;
+}
+
+</style>
